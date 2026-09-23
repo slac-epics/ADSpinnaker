@@ -1,0 +1,14 @@
+#==============================================================================
+# RELEASE_SITE Location of EPICS_SITE_TOP, EPICS_MODULES, and BASE_MODULE_VERSION
+# Run "gnumake clean uninstall install" in the application
+# top directory each time this file is changed.
+
+#==============================================================================
+BASE_MODULE_VERSION=R7.0.3.1-2.0
+EPICS_SITE_TOP=/cds/group/pcds/epics
+BASE_SITE_TOP=/cds/group/pcds/epics/base
+EPICS_MODULES=/cds/group/pcds/epics/R7.0.3.1-2.0/modules
+PACKAGE_SITE_TOP=/cds/group/pcds/package
+MATLAB_PACKAGE_TOP=/reg/common/package/matlab
+PSPKG_ROOT=/cds/group/pcds/pkg_mgr
+#==============================================================================

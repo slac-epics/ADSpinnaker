@@ -32,6 +32,15 @@ CHECK_RELEASE = YES
 #   take effect.
 #IOCS_APPL_TOP = </IOC/path/to/application/top>
 
+# =================================================================
+# Define the rhel versions with SLAC's standards (ex: rhel7-x86_64)
+# =================================================================
+ifdef T_A
+PKG_ARCH=$(T_A)
+endif
+
+# Get settings from AREA_DETECTOR, so we only have to configure once for all detectors if we want to
+
 # Get settings from AREA_DETECTOR, so we only have to configure once for all detectors if we want to
 -include $(AREA_DETECTOR)/configure/CONFIG_SITE
 -include $(AREA_DETECTOR)/configure/CONFIG_SITE.$(EPICS_HOST_ARCH)
