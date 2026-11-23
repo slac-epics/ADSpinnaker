@@ -33,6 +33,8 @@ CHECK_RELEASE = YES
 #IOCS_APPL_TOP = </IOC/path/to/application/top>
 
 # Get settings from AREA_DETECTOR, so we only have to configure once for all detectors if we want to
+
+# Get settings from AREA_DETECTOR, so we only have to configure once for all detectors if we want to
 -include $(AREA_DETECTOR)/configure/CONFIG_SITE
 -include $(AREA_DETECTOR)/configure/CONFIG_SITE.$(EPICS_HOST_ARCH)
 -include $(AREA_DETECTOR)/configure/CONFIG_SITE.$(EPICS_HOST_ARCH).Common
@@ -40,6 +42,9 @@ ifdef T_A
   -include $(AREA_DETECTOR)/configure/CONFIG_SITE.Common.$(T_A)
   -include $(AREA_DETECTOR)/configure/CONFIG_SITE.$(EPICS_HOST_ARCH).$(T_A)
 endif
+
+STATIC_BUILD=YES
+SHARED_LIBRARIES=YES
 
 # Get local settings which can override those from areaDetector
 -include $(TOP)/configure/CONFIG_SITE.local
